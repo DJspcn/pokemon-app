@@ -1,0 +1,29 @@
+<div class="pokemon-page">
+  <header class="pokemon-header">
+    <div>
+      <span class="pokemon-badge">Pokédex</span>
+      <h1>Search a Pokémon Here!</h1>
+      <p>Type a Pokémon name and click search to display its profile.</p>
+    </div>
+  </header>
+  <form class="pokemon-search" (ngSubmit)="search()">
+    <input
+      [(ngModel)]="searchText"
+      name="pokemonName"
+      type="text"
+      placeholder="e.g. pikachu"
+    />
+    <button type="submit">Search</button>
+  </form>
+  <section class="pokemon-result" *ngIf="pokemon">
+    <div class="pokemon-card">
+      <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" />
+      <div class="pokemon-details">
+        <h2>{{ pokemon.name }}</h2>
+        <p><strong>Type:</strong> {{ pokemon.types[0]?.type.name }}</p>
+        <p><strong>Height:</strong> {{ pokemon.height / 10 }} m</p>
+        <p><strong>Weight:</strong> {{ pokemon.weight / 10 }} kg</p>
+      </div>
+    </div>
+  </section>
+</div>

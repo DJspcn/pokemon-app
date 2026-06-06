@@ -1,0 +1,117 @@
+:root {
+  color-scheme: dark light;
+  color: #111827;
+  background: #f8fafc;
+}
+.pokemon-page {
+  max-width: 600px;
+  margin: 32px auto;
+  padding: 0 16px 32px;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.pokemon-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.pokemon-badge {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #f97316;
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.pokemon-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 2.4vw, 2.5rem);
+}
+.pokemon-header p {
+  margin: 12px auto 0;
+  color: #475569;
+  max-width: 460px;
+}
+.pokemon-search {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.pokemon-search input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.pokemon-search input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.16);
+}
+.pokemon-search button {
+  min-height: 48px;
+  padding: 0 22px;
+  border: none;
+  border-radius: 16px;
+  background: #f97316;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.pokemon-search button:hover {
+  background: #fb923c;
+  transform: translateY(-1px);
+}
+.pokemon-result {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.08);
+  padding: 24px;
+}
+.pokemon-card {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  grid-template-columns: 140px 1fr;
+}
+.pokemon-card img {
+  width: 100%;
+  max-width: 140px;
+  border-radius: 20px;
+  background: #f8fafc;
+  padding: 14px;
+}
+.pokemon-details {
+  padding-left: 50px;
+}
+.pokemon-details h2 {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+.pokemon-details p {
+  margin: 8px 0;
+  color: #475569;
+}
+@media (max-width: 540px) {
+  .pokemon-search {
+    grid-template-columns: 1fr;
+  }
+  .pokemon-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .pokemon-details h2 {
+    font-size: 1.6rem;
+  }
+}
